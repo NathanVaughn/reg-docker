@@ -40,3 +40,21 @@ WORKDIR /src
 
 ENTRYPOINT [ "reg" ]
 CMD [ "--help" ]
+
+LABEL org.label-schema.schema-version="1.0" \
+      org.label-schema.name="nathanvaughn/reg" \
+      org.label-schema.description="Docker image for reg" \
+      org.label-schema.license="MIT" \
+      org.label-schema.url="https://github.com/nathanvaughn/reg-docker" \
+      org.label-schema.vendor="nathanvaughn" \
+      org.label-schema.version=$REGVER \
+      org.label-schema.vcs-url="https://github.com/nathanvaughn/reg-docker.git" \
+      org.label-schema.vcs-type="Git" \
+      org.opencontainers.image.title="nathanvaughn/reg" \
+      org.opencontainers.image.description="Docker image for reg" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.url="https://github.com/nathanvaughn/reg-docker" \
+      org.opencontainers.image.authors="Nathan Vaughn" \
+      org.opencontainers.image.vendor="nathanvaughn" \
+      org.opencontainers.image.version=$REGVER \
+      org.opencontainers.image.source="https://github.com/nathanvaughn/reg-docker.git"
