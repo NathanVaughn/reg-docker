@@ -5,7 +5,7 @@
 [![](https://img.shields.io/docker/pulls/nathanvaughn/reg)](https://hub.docker.com/r/nathanvaughn/reg)
 [![](https://img.shields.io/github/license/nathanvaughn/reg-docker)](https://github.com/NathanVaughn/reg-docker)
 
-This is a **unofficial* multi-architecture Docker image for
+This is a **unofficial** multi-architecture Docker image for
 [reg](https://github.com/genuinetools/reg).
 
 ## Usage
