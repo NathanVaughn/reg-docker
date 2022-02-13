@@ -56,4 +56,4 @@ This image is available from 3 different registries. Choose whichever you want:
 
  - [docker.io/nathanvaughn/reg](https://hub.docker.com/r/nathanvaughn/reg)
  - [ghcr.io/nathanvaughn/reg](https://github.com/users/nathanvaughn/packages/container/package/reg)
- - [cr.nthnv.me/reg](https://cr.nthnv.me/repository/library/reg) (experimental)
+ - [cr.nthnv.me/library/reg](https://cr.nthnv.me/harbor/projects/1/repositories/reg) (experimental)
