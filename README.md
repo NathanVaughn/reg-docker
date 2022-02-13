@@ -24,7 +24,7 @@ services:
         - USERNAME=user
         - PASSWORD=pass
     command: server -r cr.nthnv.me -u ${USERNAME} -p ${PASSWORD}
-    image: cr.nthnv.me/reg
+    image: cr.nthnv.me/library/reg
     ports:
         - 80:8080
 ```
@@ -45,7 +45,7 @@ version: '3'
 services:
   app:
     command: server -r cr.nthnv.me -u ${USERNAME} -p ${PASSWORD}
-    image: cr.nthnv.me/reg
+    image: cr.nthnv.me/library/reg
     ports:
         - 80:8080
 ```
