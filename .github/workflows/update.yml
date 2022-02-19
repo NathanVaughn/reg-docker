@@ -58,5 +58,5 @@ jobs:
             docker.io/nathanvaughn/reg:${{ env.REGVER }}
             ghcr.io/nathanvaughn/reg:latest
             ghcr.io/nathanvaughn/reg:${{ env.REGVER }}
-            cr.nthnv.me/reg:latest
-            cr.nthnv.me/reg:${{ env.REGVER }}
+            cr.nthnv.me/library/reg:latest
+            cr.nthnv.me/library/reg:${{ env.REGVER }}
