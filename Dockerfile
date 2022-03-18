@@ -1,6 +1,6 @@
-FROM golang:alpine as builder
+FROM docker.io/library/golang:alpine as builder
 
-ARG REGVER=0.16.1
+ARG REGVER
 
 ENV PATH /go/bin:/usr/local/go/bin:$PATH
 ENV GOPATH /go
@@ -8,7 +8,7 @@ ENV GOPATH /go
 RUN	apk add --no-cache \
     git \
 	bash \
-	wget \ 
+	wget \
 	unzip \
 	ca-certificates
 
@@ -31,7 +31,7 @@ RUN set -x \
 	&& rm -rf /go \
 	&& echo "Build complete."
 
-FROM alpine:latest
+FROM docker.io/library/golang:alpine:latest
 
 COPY --from=builder /usr/bin/reg /usr/bin/reg
 COPY --from=builder /etc/ssl/certs/ /etc/ssl/certs
@@ -40,21 +40,3 @@ WORKDIR /src
 
 ENTRYPOINT [ "reg" ]
 CMD [ "--help" ]
-
-LABEL org.label-schema.schema-version="1.0" \
-      org.label-schema.name="nathanvaughn/reg" \
-      org.label-schema.description="Docker image for reg" \
-      org.label-schema.license="MIT" \
-      org.label-schema.url="https://github.com/nathanvaughn/reg-docker" \
-      org.label-schema.vendor="nathanvaughn" \
-      org.label-schema.version=$REGVER \
-      org.label-schema.vcs-url="https://github.com/nathanvaughn/reg-docker.git" \
-      org.label-schema.vcs-type="Git" \
-      org.opencontainers.image.title="nathanvaughn/reg" \
-      org.opencontainers.image.description="Docker image for reg" \
-      org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.url="https://github.com/nathanvaughn/reg-docker" \
-      org.opencontainers.image.authors="Nathan Vaughn" \
-      org.opencontainers.image.vendor="nathanvaughn" \
-      org.opencontainers.image.version=$REGVER \
-      org.opencontainers.image.source="https://github.com/nathanvaughn/reg-docker.git"
